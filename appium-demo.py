@@ -29,7 +29,7 @@ class AppiumDemoTests(unittest.TestCase):
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '9'
         desired_caps['deviceName'] = 'Pixel (Edited)'
-        desired_caps['newCommandTimeout'] = '60000'
+        desired_caps['newCommandTimeout'] = '3000'
         desired_caps['automationName'] ='uiautomator2'
         # Returns abs path relative to this file and not cwd
         desired_caps['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'ApiDemos-debug.apk'))
@@ -37,98 +37,97 @@ class AppiumDemoTests(unittest.TestCase):
         desired_caps['appActivity'] = "ApiDemos"
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
-        self.driver.implicitly_wait(50)
+        #self.driver.implicitly_wait(10)
 
         
-    # def test_Slide(self):
+    def test_Slider_Validation(self):
         
-    #     #self.driver.implicitly_wait(10)
+        #self.driver.implicitly_wait(10)
 
-    #     "Click on Views"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
+        "Click on Views"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
 
-    #     "Select the Date Widgets"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='Date Widgets']").click()
+        "Select the Date Widgets"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Date Widgets']").click()
 
-    #     "Select Inline element using UIAutomator"
-    #     self.driver.find_element_by_android_uiautomator("text(\"2. Inline\")").click()
+        "Select Inline element using UIAutomator"
+        self.driver.find_element_by_android_uiautomator("text(\"2. Inline\")").click()
 
-    #     "Select the time 2:30"
-    #     self.driver.find_element_by_xpath("//*[@content-desc='2']").click()
+        "Select the time 2:30"
+        self.driver.find_element_by_xpath("//*[@content-desc='2']").click()
 
-    #     "Call the touch method"
-    #     touch = TouchAction(self.driver)
+        "Call the touch method"
+        touch = TouchAction(self.driver)
 
-    #     "Select the time 2:10"
-    #     first = self.driver.find_element_by_xpath("//*[@content-desc='10']").click()
+        "Select the time 2:10"
+        first = self.driver.find_element_by_xpath("//*[@content-desc='10']").click()
 
-    #     "Select the time 2:50"
-    #     second = self.driver.find_element_by_xpath("//*[@content-desc='50']").click()
+        "Select the time 2:50"
+        second = self.driver.find_element_by_xpath("//*[@content-desc='50']").click()
 
-    #     "Call the long press method to move the minutes"
-    #     touch.long_press(first).move_to(second).release().perform()
+        "Call the long press method to move the minutes"
+        touch.long_press(first).move_to(second).release().perform()
 
-    # def test_Long_press(self):
+        "Check if the clock ticker moved to 2"
+        self.assertEqual(True, self.driver.find_element_by_xpath("//*[@content-desc='2']"))
+
+    def test_Long_Press_Validation(self):
         
-    #     #self.driver.implicitly_wait(10)
+        #self.driver.implicitly_wait(10)
 
-    #     "Click on Views"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
+        "Click on Views"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
         
-    #     "Call the touch method from unittest module"
-    #     touch = TouchAction(self.driver)
-    #     el = self.driver.find_element_by_xpath("//android.widget.TextView[@text='Expandable Lists']")
+        "Call the touch method from unittest module and select Expandable Lists"
+        touch = TouchAction(self.driver)
+        el = self.driver.find_element_by_xpath("//android.widget.TextView[@text='Expandable Lists']")
         
-    #     "Perform tap operation"
-    #     touch.tap(el).perform()
+        "Perform tap operation"
+        touch.tap(el).perform()
         
-    #     "Click on 1. Custom Adapter"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='1. Custom Adapter']").click()
+        "Click on 1. Custom Adapter"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='1. Custom Adapter']").click()
         
-    #     "Select Fish Names"
-    #     fish = self.driver.find_element_by_xpath("//android.widget.TextView[@text='Fish Names']")
+        "Select Fish Names"
+        fish = self.driver.find_element_by_xpath("//android.widget.TextView[@text='Fish Names']")
         
-    #     "Long press on it to check whether the content is displayed "
-    #     touch.long_press(fish).release().perform()
+        "Long press on it to check whether the content is displayed "
+        touch.long_press(fish).release().perform()
        
-    #     "Check whether the selected element has displayed all the sub-elements"
-    #     el = self.driver.find_element_by_id("android:id/title")
-    #     print(el)
-    #     self.assertEqual(True, (self.driver.find_element_by_id("android:id/title").is_displayed()))
-
-    # def test_Drag_and_drop(self):
-
-    #     #self.driver.implicitly_wait(10)
-
-    #     "Click on Views"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
-
-    #     "Click on drag and drop"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='Drag and Drop']").click()
-
-    #     "Select the draggable element"
-    #     source = self.driver.find_elements_by_class_name("android.view.View")[0]
-
-    #     "Select the droppable element"
-    #     dest = self.driver.find_elements_by_class_name("android.view.View")[1]
-
-    #     "Call the touch method"
-    #     touch = TouchAction(self.driver)
-
-    #     "Call the long press method to drag and drop"
-    #     touch.long_press(source).move_to(dest).release().perform()
-
-    # def test_Scroll(self):
-
-    #     #self.driver.implicitly_wait(10)
-
-    #     "Click on Views"
-    #     self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
-
-    #     "Initiate scrolling"
-    #     self.driver.find_element_by_android_uiautomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"WebView\"))")
-
+        "Check whether the selected element has displayed all the sub-elements"
+        el = self.driver.find_element_by_id("android:id/title")
     
+        self.assertEqual(True, (self.driver.find_element_by_id("android:id/title").is_displayed()))
+
+    def test_Drag_And_Drop_Validation(self):
+
+        #self.driver.implicitly_wait(10)
+
+        "Click on Views"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Views']").click()
+
+        "Click on drag and drop"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='Drag and Drop']").click()
+
+        "Select the draggable element"
+        source = self.driver.find_elements_by_class_name("android.view.View")[0]
+
+        "Select the droppable element"
+        dest = self.driver.find_elements_by_class_name("android.view.View")[1]
+
+        "Call the touch method"
+        touch = TouchAction(self.driver)
+
+        "Call the long press method to drag and drop"
+        touch.press(source).move_to(dest).release().perform()
+
+        "Select the visible_element"
+        visible_element = self.driver.find_element_by_id("io.appium.android.apis:id/drag_dot_hidden")
+
+        "Check whether the element is visible"
+        if(not visible_element):
+            assert(0)
+
 
     def checkbox_enabled(self):
         """ checks if the checkbox is enabled 
@@ -230,6 +229,26 @@ class AppiumDemoTests(unittest.TestCase):
             print("set name: {}, get name: {}".format(set_name, get_name))
             assert(0)
 
+    def test_Save_the_WiFi_Checkbox_Status_Validation(self):
+
+        """Navigate to the test page and initialize the checkbox"""
+        self.init_wifi_settings()
+
+        "Click on Checkbox preference"
+        self.checkbox_toggle()
+        
+        "To find whether the checkbox element is selected or not"
+        isChecked = self.driver.find_element_by_id("android:id/checkbox").get_attribute("checked")
+
+        "Go back to previous page"
+        self.driver.back()
+
+        "Come again to the WiFi settings page"
+        self.driver.find_element_by_xpath("//android.widget.TextView[@text='3. Preference dependencies']").click()
+
+        "Check the checkbox which is previously checked"
+        if(not isChecked):
+            assert(0)
 
     def tearDown(self):
 
@@ -241,6 +260,3 @@ class AppiumDemoTests(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(AppiumDemoTests)
     unittest.TextTestRunner(verbosity=2).run(suite)
-
-
-    
