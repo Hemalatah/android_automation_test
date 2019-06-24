@@ -1,6 +1,7 @@
 ### Demo Application Description
 
 I used an application with basic UI interacting elements like checkbox, slider, press-and-hold, Drag-and-drop and Text Field. In this application, I automated four features and wrote 8 test cases. I also wrote the manual test cases in the EXCEL Sheet attached in this repositry as *Appium_Demo UI Test Cases.xlsx*.
+
 A simple demo of the featue I automated.
 
 ![](https://github.com/Hemalatah/android_automation_test/blob/master/Demo/demo.gif)
