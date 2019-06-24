@@ -2,6 +2,7 @@
 
 I used an application with basic UI interactions. In this application, I automated four features and wrote 8 test cases. Below are the screen shots of some of the tested pages in the application.
 
+<img src="(https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Home%20Page.png" width="40%">
 ![Home Page](https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Home%20Page.png | width=100)
 ![WiFi Settings Test]()
 ![Log Press Test]()
