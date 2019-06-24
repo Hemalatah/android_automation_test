@@ -12,4 +12,4 @@ I used an application with basic UI interactions. In this application, I automat
 I used Appium framework for automating the tests in the above pages. Scripts are written in Python using Unittest Module and other supported libraries. Used Android Studio to get the emulator through ADB server to test teh automation. For writing the automation scripts using python, UI element attributes are identified by UIAutomatorViewer.
 
 Below is the workflow in Appium Automation:
-<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Appium%20Workflow.png" width="30%">
+<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Appium%20Workflow.png" width="70%">
