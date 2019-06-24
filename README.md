@@ -16,7 +16,7 @@ Note: 1. Every demo videos are named after its python test case method
 
 ### Description about the Automation
 
-I used Appium framework for automating the tests in the above pages. Scripts are written in Python using Unittest Module and other supported libraries. Used Android Studio to get the emulator through ADB server to test teh automation. For writing the automation scripts using python, UI element attributes are identified by UIAutomatorViewer.
+I used Appium framework for automating the tests in the above pages. Scripts are written in Python using Unittest Module and other supported libraries. Used Android Studio to get the emulator through ADB server to test the automation. For writing the automation scripts using python, UI element attributes are identified by UIAutomatorViewer.
 
 Below is the workflow in Appium Automation:
 <img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Appium%20Workflow.png" width="70%">
