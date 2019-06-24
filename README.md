@@ -18,5 +18,6 @@ Below is the workflow in Appium Automation:
 
 ##### Test Case for WiFi Settings:
 For checking whether the user is allowed to enter the text in the text field after the field is enabled with the checkbox, I used the below page:
+
 <img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/WiFi_Settings_tests.png" width="30%">
 
