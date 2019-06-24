@@ -2,10 +2,7 @@
 
 I used an application with basic UI interacting elements like checkbox, slider, press-and-hold, Drag-and-drop and Text Field. In this application, I automated four features and wrote 8 test cases. I also wrote the manual test cases in the EXCEL Sheet attached in this repositry as *Appium_Demo UI Test Cases.xlsx*. Below is the home page of the application.
 
-<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Home%20Page.png" width="30%">   <img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Long_Press_test.png" width="30%">  
-
-<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Slider_test.png" width="30%">  <img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Drag_And_Drop_test.png" width="30%">  
-
+<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Home%20Page.png" width="30%">     
 
 ### Description about the Automation
 
@@ -20,4 +17,19 @@ Below is the workflow in Appium Automation:
 For checking whether the user is allowed to enter the text in the text field after the field is enabled with the checkbox, I used the below page:
 
 <img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/WiFi_Settings_tests.png" width="30%">
+
+##### Test Case for Clock Functinality:
+This test case is to check whether the clock responds properly when the user change the value of hours and minutes. If the clock ticker is moved to the user expected value, then the test is valid!
+
+<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Slider_test.png" width="30%">
+
+##### Test Case for Make Hidden Visible:
+This test checks whether the hidden object is visible when the user do some actions. In this scenario, the preferred action is drag and drop.
+
+<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Drag_And_Drop_test.png" width="30%">
+
+##### Test Case for Long Press:
+When the user tap-and-holds a tab, the tab should be respondede with a popup window. But the actual tab also do lists some sub-lists when it is just pressed and released.
+
+<img src="https://github.com/Hemalatah/android_automation_test/blob/master/Screen_shots/Long_Press_test.png" width="30%">
 
